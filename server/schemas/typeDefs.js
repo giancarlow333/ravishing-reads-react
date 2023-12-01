@@ -19,7 +19,7 @@ const typeDefs = `
     noteText: String
     createdAt: String
     rating: Int
-    user: Profile!
+    user: Profile
   }
   
   type Book {
@@ -43,7 +43,7 @@ const typeDefs = `
     books:[Book]!
     wishlist(profileId: ID!): [Book]!
     toReads(profileId: ID!): [Book]!
-    alreadyRead: [Book]!
+    alreadyRead(profileId: ID!): [Book]!
     book(bookId: ID!): Book
     getBookNote(bookId: ID!, profileId: ID!): Note
   }
