@@ -1,5 +1,17 @@
 var books = require("google-books-search");
 
+const APIKey = 'AIzaSyD3tYIFoXhEoiZmM6nyLWfzMRSYhTvFjuA'
+
+const options = {
+  // key: "YOUR API KEY",
+  // field: 'title',
+  //  offset: 0,
+  limit: 2,
+  type: "books",
+  //  order: 'relevance',
+  //  lang: 'en'
+};
+
 function bookQuery(searchTerm) {
     return new Promise((resolve, reject) => {
       books.search(searchTerm, function (error, results) {
